@@ -1,0 +1,149 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Space Game Design System */
+
+@layer base {
+  :root {
+    --background: 0 0% 8%;
+    --foreground: 200 20% 98%;
+
+    --card: 240 10% 12%;
+    --card-foreground: 200 20% 98%;
+
+    --popover: 240 10% 12%;
+    --popover-foreground: 200 20% 98%;
+
+    --primary: 200 100% 50%;
+    --primary-foreground: 240 10% 12%;
+
+    --secondary: 240 10% 20%;
+    --secondary-foreground: 200 20% 98%;
+
+    --muted: 240 10% 16%;
+    --muted-foreground: 200 10% 60%;
+
+    --accent: 280 100% 70%;
+    --accent-foreground: 240 10% 12%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 240 10% 20%;
+    --input: 240 10% 16%;
+    --ring: 200 100% 50%;
+
+    --radius: 0.75rem;
+
+    --game-bg-start: 240 50% 8%;
+    --game-bg-end: 260 60% 4%;
+    --star-color: 200 100% 80%;
+    --asteroid-color: 30 20% 40%;
+    --enemy-color: 0 80% 60%;
+    --spaceship-color: 200 100% 60%;
+    --projectile-color: 120 100% 60%;
+  }
+
+  .dark {
+    --background: 0 0% 4%;
+    --foreground: 200 20% 98%;
+    --card: 240 10% 8%;
+    --secondary: 240 10% 16%;
+    --muted: 240 10% 12%;
+    --border: 240 10% 16%;
+    --input: 240 10% 12%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+
+  /* Game-specific styles */
+  .game-background {
+    background: linear-gradient(
+      180deg,
+      hsl(var(--game-bg-start)) 0%,
+      hsl(var(--game-bg-end)) 100%
+    );
+  }
+
+  .glass-effect {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .game-button {
+    @apply relative overflow-hidden px-6 py-3 rounded-lg font-semibold transition-all duration-300;
+    background: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--accent)) 100%);
+    box-shadow: 0 4px 15px rgba(0, 100, 255, 0.3);
+  }
+
+  .game-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 100, 255, 0.4);
+  }
+
+  .game-button:active {
+    transform: translateY(0);
+  }
+
+  /* Animations */
+  .float {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  .pulse-glow {
+    animation: pulse-glow 2s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+  }
+
+  @keyframes pulse-glow {
+    0%, 100% { 
+      box-shadow: 0 0 20px rgba(0, 100, 255, 0.3);
+    }
+    50% { 
+      box-shadow: 0 0 30px rgba(0, 100, 255, 0.6);
+    }
+  }
+
+  @keyframes shooting-star {
+    0% {
+      transform: translateX(-100px) translateY(-100px);
+      opacity: 0;
+    }
+    10% {
+      opacity: 1;
+    }
+    90% {
+      opacity: 1;
+    }
+    100% {
+      transform: translateX(100vw) translateY(100vh);
+      opacity: 0;
+    }
+  }
+
+  @keyframes flash {
+  0%   { opacity: 1; }
+  50%  { opacity: 0.4; }
+  100% { opacity: 1; }
+  }
+
+  .shooting-star {
+    animation: shooting-star 3s linear infinite;
+  }
+}
