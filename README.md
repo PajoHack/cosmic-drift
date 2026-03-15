@@ -63,7 +63,7 @@ Grants **+1 life**.
 
 | Key | Action |
 |----|----|
-| **Arrow Keys / Movement Controls** | Move the spaceship |
+| **Arrow Keys** or **W A S D** | Move the spaceship |
 | **Spacebar** | Fire laser |
 | **M** | Fire missile |
 
@@ -80,7 +80,6 @@ Grants **+1 life**.
 ### Game Over Screen
 ![Game Over](screenshots/game-over.png)
 
-*(Replace these with your actual screenshot filenames)*
 
 ---
 
