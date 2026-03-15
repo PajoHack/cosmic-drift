@@ -31,6 +31,7 @@ export const useGameState = () => {
   });
   const [settings, setSettings] = useState<GameSettings>(initialSettings);
   const pauseStartTime = useRef<number | null>(null);
+  const pausedFromStatus = useRef<'playing' | 'boss_battle'>('playing');
   const lastBossDefeatedTime = useRef<number | null>(null);
   const { highScore, furthestDistance, updateHighScore, updateFurthestDistance } = useHighScore();
 
@@ -45,7 +46,8 @@ export const useGameState = () => {
   }, [highScore, furthestDistance]);
 
   const pauseGame = useCallback(() => {
-    if (gameState.status === 'playing') {
+    if (gameState.status === 'playing' || gameState.status === 'boss_battle') {
+      pausedFromStatus.current = gameState.status;
       setGameState(prev => ({ ...prev, status: 'paused' }));
       pauseStartTime.current = Date.now();
     }
@@ -53,7 +55,7 @@ export const useGameState = () => {
 
   const resumeGame = useCallback(() => {
     if (gameState.status === 'paused') {
-      setGameState(prev => ({ ...prev, status: 'playing' }));
+      setGameState(prev => ({ ...prev, status: pausedFromStatus.current }));
       pauseStartTime.current = null;
     }
   }, [gameState.status]);
