@@ -73,10 +73,6 @@ export const PauseMenu: React.FC<PauseMenuProps> = ({
             Main Menu
           </Button>
         </div>
-
-        <div className="mt-6 text-xs text-muted-foreground">
-          Tip: Pausing for over 2 minutes will show an ad
-        </div>
       </div>
     </div>
   );
