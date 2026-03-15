@@ -1,73 +1,196 @@
-# Welcome to your Lovable project
+# 🚀 Cosmic Drift
 
-## Project info
+![Gameplay Preview](screenshots/gameplay-preview.gif)
 
-**URL**: https://lovable.dev/projects/dc20306f-668c-44b2-ac2d-ed3a23dcbc15
+**Cosmic Drift** is a fast-paced space survival game where you pilot a lone spaceship through an endless asteroid field while battling waves of enemies and powerful bosses.
 
-## How can I edit this code?
+Your mission: **survive as long as possible and travel further than any pilot before you.**
 
-There are several ways of editing your application.
+---
 
-**Use Lovable**
+## 🎮 Gameplay
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/dc20306f-668c-44b2-ac2d-ed3a23dcbc15) and start prompting.
+You start your journey with **3 lives** and must navigate through deep space while destroying enemies and avoiding hazards.
 
-Changes made via Lovable will be committed automatically to this repo.
+The further you travel, the more intense the action becomes.
 
-**Use your preferred IDE**
+⚡ **Boss battles begin after travelling 1 Light Year.**
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+Once defeated, another boss will appear **every additional Light Year**.
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+---
 
-Follow these steps:
+## 🧠 Game Mechanics
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+### Lives
+- You start with **3 lives**
+- Losing all lives ends the mission
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+### Distance
+- Distance is measured in **Light Years (LY)**
+- Boss encounters trigger every **1 LY**
 
-# Step 3: Install the necessary dependencies.
-npm i
+### Enemies
+Enemies spawn continuously as you travel through space.
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+Some enemies shoot back, while others try to collide with your ship.
+
+---
+
+## ⚡ Power Ups
+
+Power ups spawn randomly and can drastically change your survival chances.
+
+### 🌀 Orbiting Rods
+Three spinning rods orbit your ship and:
+- Destroy enemies on contact
+- Protect you from incoming threats
+
+### 🛡 Shield
+Temporary invincibility for a few seconds.
+
+You cannot take damage while shielded.
+
+### 🚀 Missiles
+Powerful weapon that can wipe out enemies instantly.
+
+### ❤️ Extra Life
+Grants **+1 life**.
+
+---
+
+## 🎮 Controls
+
+| Key | Action |
+|----|----|
+| **Arrow Keys / Movement Controls** | Move the spaceship |
+| **Spacebar** | Fire laser |
+| **M** | Fire missile |
+
+---
+
+## 📸 Screenshots
+
+### Gameplay
+![Gameplay](screenshots/gameplay.png)
+
+### Boss Battle
+![Boss Battle](screenshots/boss-battle.png)
+
+### Game Over Screen
+![Game Over](screenshots/game-over.png)
+
+*(Replace these with your actual screenshot filenames)*
+
+---
+
+## 🛠 Running the Game
+
+This project uses **Vite + React + TypeScript**.
+
+### 1️⃣ Install dependencies
+
+```bash
+npm install 
+
+
+### 2️⃣ Start the development server
+
+```bash
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+### 3️⃣ Open in your browser
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+After starting the development server, open:
 
-**Use GitHub Codespaces**
+```
+http://localhost:5173
+```
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+The game will launch in your browser.
 
-## What technologies are used for this project?
+---
 
-This project is built with:
+## 🏗 Build for Production
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+To create an optimized production build:
 
-## How can I deploy this project?
+```bash
+npm run build
+```
 
-Simply open [Lovable](https://lovable.dev/projects/dc20306f-668c-44b2-ac2d-ed3a23dcbc15) and click on Share -> Publish.
+To preview the production build locally:
 
-## Can I connect a custom domain to my Lovable project?
+```bash
+npm run preview
+```
 
-Yes, you can!
+---
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+## 🤝 Contributing
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+Contributions are **welcome and encouraged**.
+
+If you would like to improve Cosmic Drift:
+
+1. Fork the repository
+2. Create a feature branch
+
+```bash
+git checkout -b feature/your-feature
+```
+
+3. Make your changes
+4. Commit your work
+
+```bash
+git commit -m "Add some feature"
+```
+
+5. Push to your fork
+
+```bash
+git push origin feature/your-feature
+```
+
+6. Open a **Pull Request**
+
+Suggestions for improvements include:
+
+- New enemy types  
+- Additional bosses  
+- New power-ups  
+- Improved visual effects  
+- Sound design improvements  
+- Mobile controls  
+- Leaderboards  
+- Difficulty scaling  
+
+All constructive improvements are welcome.
+
+---
+
+## 💡 Future Ideas
+
+Possible future additions:
+
+- Online high score leaderboard  
+- Additional boss types  
+- New weapon systems  
+- Cooperative multiplayer  
+- Procedural enemy waves  
+- Expanded soundtrack and sound effects  
+
+---
+
+## ⭐ Support the Project
+
+If you enjoy the game, consider giving the repository a **star ⭐** on GitHub.  
+It helps others discover the project and encourages further development.
+
+---
+
+## 👨‍🚀 Author
+
+Created by **Patrick Hackman**
